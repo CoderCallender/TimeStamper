@@ -34,21 +34,21 @@ namespace TimeStamper
 
             int start_hour = int.Parse(start_split[0]);
             int start_min = int.Parse(start_split[1]);
-       //     int start_sec = int.Parse(start_split[2]);
+
 
             Debug.WriteLine("start");
             Debug.WriteLine(start_hour);
             Debug.WriteLine(start_min);
-        //    Debug.WriteLine(start_sec);
+     
 
             int end_hour = int.Parse(end_split[0]);
             int end_min = int.Parse(end_split[1]);
-        //    int end_sec = int.Parse(end_split[2]);
+     
 
             Debug.WriteLine("end");
             Debug.WriteLine(end_hour);
             Debug.WriteLine(end_min);
-          //  Debug.WriteLine(end_sec);
+         
 
             //always assume that the end is after the start for now
             int hour = 0;
@@ -57,7 +57,7 @@ namespace TimeStamper
             //do this if it has passed midnight
             if (start_hour > end_hour)
             {
-                hour = start_hour + end_hour;
+                hour = (24 - start_hour) + end_hour;
             }
 
             else
@@ -78,8 +78,7 @@ namespace TimeStamper
             Debug.WriteLine("result");
             Debug.WriteLine(hour);
             ResultTextBox.Text = hour.ToString() + ":" + min.ToString(); ;
-
-            //  
+ 
 
         }
 
