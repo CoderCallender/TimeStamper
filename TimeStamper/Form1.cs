@@ -77,7 +77,7 @@ namespace TimeStamper
             }
             Debug.WriteLine("result");
             Debug.WriteLine(hour);
-            ResultTextBox.Text = hour.ToString() + ":" + min.ToString(); ;
+            ResultTextBox.Text = hour.ToString() + ":" + min.ToString("D2"); 
  
 
         }
